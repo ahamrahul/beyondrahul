@@ -1,130 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rahul Jha | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header,
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .read-more {
+      display: none;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    button {
+      background: #444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+    }
+  </style>
 </head>
+
 <body>
-  <header class="hero">
-    <div class="overlay">
-      <h1>Rahul Jha</h1>
-      <p>Mechanical Engineer | Kiln Expert | Friendly Human</p>
-      <nav>
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#album">Album</a></li>
-          <li><a href="#diary">Diary</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <h1>Rahul Jha</h1>
+    <p>Mechanical Engineer | Kiln Specialist | Tech Enthusiast</p>
   </header>
 
-  <main>
-    <!-- Contact is always visible -->
-    <section id="contact" class="visible-section">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a></p>
-      <p>WhatsApp: <a href="https://wa.me/9113167508">+91 13167508</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/ahamrahul">linkedin.com/in/ahamrahul</a></p>
-      <p class="note">Call or contact me whenever you want – I'm happy to help you. Treat me like a friend 😊</p>
-    </section>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- All other sections hidden initially and only show when clicked -->
-    <section id="about" class="hidden-section">
-      <h2>About Me</h2>
-      <p>Hello! I'm Rahul, a mechanical engineer with expertise in rotary kilns, slope correction, 3D shell analysis, and thermal expansion. I'm also passionate about poetry, travel, and helping people.</p>
-    </section>
+  <section id="home">
+    <div class="slider">
+      <img src="images/photo1.jpg" alt="Slide 1" />
+      <img src="images/photo2.jpg" alt="Slide 2" />
+      <img src="images/photo3.jpg" alt="Slide 3" />
+      <img src="images/photo4.jpg" alt="Slide 4" />
+    </div>
+  </section>
 
-    <section id="skills" class="hidden-section">
-      <h2>My Skills</h2>
-      <ul>
-        <li>Rotary Kiln Slope Correction</li>
-        <li>Plan & Elevation View Analysis</li>
-        <li>Shell Profile 3D Analysis</li>
-        <li>Thermal Expansion Study</li>
-        <li>Field Alignment & Service Expert</li>
-      </ul>
-    </section>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      Dynamic Mechanical Engineer with 4+ years of expertise in kiln alignment,
+      rotary equipment maintenance, and AI-driven industrial processes.
+      <span id="more" class="read-more">
+        Proven ability to optimize kiln performance, improve operational efficiency, and integrate advanced technologies like AI and Python-based analytics for predictive maintenance. Strong problem-solving skills, adaptability, and commitment to Industry 4.0 innovations. Born and brought up in Mithila, Bihar, I completed B.Sc. in PCM and B.Tech in Mechanical Engineering from RTU. I started my journey through challenges, worked with JSW under a contractor, and realized the power of technology. Later, I worked with top companies like Tata Steel, Reliance, Aditya Birla, and more via Allan Smith Engineering Pvt. Ltd. I’m always curious, always learning.
+      </span>
+      <a href="#" onclick="toggleMore(); return false;">Read More</a>
+    </p>
+  </section>
 
-    <section id="experience" class="hidden-section">
-      <h2>My Experience</h2>
-      <p>Currently working with Allan Smith Engineering Pvt. Ltd. handling alignment, cold/hot correction, and technical support. I also design kiln models in SolidWorks.</p>
-    </section>
+  <section id="projects">
+    <h2>Projects & Clients</h2>
+    <p>
+      Tata Steel, NCL, Vishnu Chemical, Balarsha Paper Mill, Godavari Ispat,
+      Hindalco, Loydes, Reliance, Birla Carbon, Silox, Andritz, Andhra Paper,
+      Gaillant, Girdhan Metal, Jindal Saw, Epsilon Carbon, Shyam Steel, SRF, and many more.
+    </p>
 
-    <section id="projects" class="hidden-section">
-      <h2>Projects</h2>
-      <ul>
-        <li>AI-Powered Kiln Monitoring Tool (In Progress)</li>
-        <li>Rotary Kiln 3D Simulation in SolidWorks</li>
-        <li>Field Alignment Dashboard (Python + Web)</li>
-      </ul>
-    </section>
+    <h3>Key Skills & Expertise</h3>
+    <ul>
+      <li>✔ Kiln or Rotary Drum Erection & Commissioning</li>
+      <li>✔ Kiln Alignment & Maintenance: Hot/Cold, Girth Gear, Shell Profiling</li>
+      <li>✔ Tools: Auto Level, Total Station, Roto-Dia, Shell Ovality Sensor</li>
+      <li>✔ AI & Python: NumPy, Pandas, Matplotlib, Predictive Maintenance</li>
+      <li>✔ SolidWorks, MS Office</li>
+      <li>✔ Process Optimization & AI-Driven Maintenance</li>
+      <li>✔ Languages: Hindi, English, Maithili</li>
+    </ul>
+  </section>
 
-    <section id="album" class="hidden-section">
-      <h2>My Album</h2>
-      <div class="photo-category">
-        <h3>College Life</h3>
-        <img src="images/rahul_college.jpg" alt="College" />
-        <h3>Work</h3>
-        <img src="images/rahul_office.jpg" alt="Work" />
-        <h3>Fun</h3>
-        <img src="images/rahul_fun.jpg" alt="Fun" />
-      </div>
-    </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Mobile/WhatsApp: <strong>+91 9113167508</strong></p>
+    <p>Email: <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/rahul-jha" target="_blank">linkedin.com/in/rahul-jha</a></p>
 
-    <section id="diary" class="hidden-section">
-      <h2>My Diary</h2>
-      <p>This is my special corner to update poems, thoughts, and shayari.</p>
-      <blockquote>"Zindagi ki kitaab mein har pal ek nayi kahani likhta hoon..."</blockquote>
-    </section>
-  </main>
+    <div class="contact-form">
+      <form action="mailto:ahamrahuljha@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Thank you for visiting! I'm happy to help and even happier to talk with you, because a smile is the best treatment. Believe me, I’m a good listener :)</p>
+  </footer>
 
   <script>
-    const navLinks = document.querySelectorAll("nav a");
-    const sections = document.querySelectorAll("main section");
-
-    function hideAllSections() {
-      sections.forEach(sec => {
-        if (!sec.classList.contains('visible-section')) {
-          sec.style.display = "none";
-        }
-      });
+    function toggleMore() {
+      const moreText = document.getElementById('more');
+      moreText.style.display = moreText.style.display === 'inline' ? 'none' : 'inline';
     }
-
-    navLinks.forEach(link => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        hideAllSections();
-        target.style.display = "block";
-      });
-    });
-
-    hideAllSections(); // hide all initially except contact
   </script>
-
-  <style>
-    body { font-family: sans-serif; margin: 0; background: #fff; }
-    header.hero {
-      background: url('images/rahul_red_blazer.jpg') center/cover no-repeat;
-      color: white;
-      height: 100vh;
-      position: relative;
-    }
-    .overlay { background: rgba(0,0,0,0.6); height: 100%; padding: 2rem; }
-    nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; }
-    nav a { color: #fff; text-decoration: none; font-weight: bold; }
-    main { padding: 2rem; }
-    .hidden-section { display: none; }
-    .visible-section { display: block; background: #f8f8f8; padding: 1rem; }
-    .photo-category img { width: 200px; margin: 0.5rem; border-radius: 10px; }
-    .note { font-style: italic; margin-top: 1rem; color: darkgreen; }
-  </style>
 </body>
+
 </html>
