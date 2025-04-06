@@ -1,129 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beyond Rahul | Portfolio</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background: #fdfdfd; color: #222; line-height: 1.6; }
-    header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('rahul_offic_inj.jpg') no-repeat center center/cover;
-      color: white;
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    header h1 { font-size: 3rem; margin-bottom: 1rem; }
-    header p { font-size: 1.2rem; }
-    nav {
-      background: #222;
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    section { padding: 2rem; max-width: 1000px; margin: auto; }
-    h2 { color: #b30000; margin-bottom: 1rem; }
-    .album img {
-      width: 220px;
-      margin: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    .contact-info { margin-top: 1rem; }
-    footer {
-      text-align: center;
-      background: #222;
-      color: white;
-      padding: 1rem;
-    }
-    .diary-box {
-      background: #fff8f0;
-      border: 1px solid #ccc;
-      padding: 1rem;
-      border-radius: 10px;
-      margin-top: 2rem;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rahul Jha | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Rahul Jha</h1>
+      <p>Mechanical Engineer | Kiln Expert | Friendly Human</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#album">Album</a></li>
+          <li><a href="#diary">Diary</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <h1>Beyond Rahul</h1>
-  <p>Mechanical Engineer | Kiln Expert | Friendly Listener</p>
-</header>
+  <main>
+    <!-- Contact is always visible -->
+    <section id="contact" class="visible-section">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/9113167508">+91 13167508</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ahamrahul">linkedin.com/in/ahamrahul</a></p>
+      <p class="note">Call or contact me whenever you want – I'm happy to help you. Treat me like a friend 😊</p>
+    </section>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#album">Album</a>
-  <a href="#diary">Diary</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <!-- All other sections hidden initially and only show when clicked -->
+    <section id="about" class="hidden-section">
+      <h2>About Me</h2>
+      <p>Hello! I'm Rahul, a mechanical engineer with expertise in rotary kilns, slope correction, 3D shell analysis, and thermal expansion. I'm also passionate about poetry, travel, and helping people.</p>
+    </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>Hi! I’m Rahul Jha, a passionate mechanical engineer who loves to explore industrial solutions and listen to people with an open heart.</p>
-  <p>I believe in learning every day and improving step by step.</p>
-</section>
+    <section id="skills" class="hidden-section">
+      <h2>My Skills</h2>
+      <ul>
+        <li>Rotary Kiln Slope Correction</li>
+        <li>Plan & Elevation View Analysis</li>
+        <li>Shell Profile 3D Analysis</li>
+        <li>Thermal Expansion Study</li>
+        <li>Field Alignment & Service Expert</li>
+      </ul>
+    </section>
 
-<section id="skills">
-  <h2>My Skills</h2>
-  <ul>
-    <li>Kiln slope correction & alignment</li>
-    <li>Plan & Elevation view setup</li>
-    <li>Floating kiln analysis for efficiency</li>
-    <li>Shell profile 3D analysis</li>
-    <li>Thermal expansion and balancing</li>
-  </ul>
-</section>
+    <section id="experience" class="hidden-section">
+      <h2>My Experience</h2>
+      <p>Currently working with Allan Smith Engineering Pvt. Ltd. handling alignment, cold/hot correction, and technical support. I also design kiln models in SolidWorks.</p>
+    </section>
 
-<section id="experience">
-  <h2>Experience</h2>
-  <p>Currently working with Allan Smith Engineering Pvt. Ltd. as a Kiln Service Engineer. Specialized in hot/cold alignment, tyre-roller grinding, and more.</p>
-</section>
+    <section id="projects" class="hidden-section">
+      <h2>Projects</h2>
+      <ul>
+        <li>AI-Powered Kiln Monitoring Tool (In Progress)</li>
+        <li>Rotary Kiln 3D Simulation in SolidWorks</li>
+        <li>Field Alignment Dashboard (Python + Web)</li>
+      </ul>
+    </section>
 
-<section id="album">
-  <h2>My Album</h2>
-  <div class="album">
-    <img src="rahul jpg.jpg" alt="Rahul casual">
-    <img src="rahul_offic_inj.jpg" alt="Rahul office">
-    <!-- More photos can be added here later -->
-  </div>
-</section>
+    <section id="album" class="hidden-section">
+      <h2>My Album</h2>
+      <div class="photo-category">
+        <h3>College Life</h3>
+        <img src="images/rahul_college.jpg" alt="College" />
+        <h3>Work</h3>
+        <img src="images/rahul_office.jpg" alt="Work" />
+        <h3>Fun</h3>
+        <img src="images/rahul_fun.jpg" alt="Fun" />
+      </div>
+    </section>
 
-<section id="diary">
-  <h2>My Diary</h2>
-  <div class="diary-box">
-    <p><strong>Note:</strong> This is my personal diary space. I’ll keep adding my poetry, thoughts, and travel stories here!</p>
-    <p>— Stay connected ❤️</p>
-  </div>
-</section>
+    <section id="diary" class="hidden-section">
+      <h2>My Diary</h2>
+      <p>This is my special corner to update poems, thoughts, and shayari.</p>
+      <blockquote>"Zindagi ki kitaab mein har pal ek nayi kahani likhta hoon..."</blockquote>
+    </section>
+  </main>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <div class="contact-info">
-    <p>Email: <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a></p>
-    <p>WhatsApp: <a href="https://wa.me/9113167508" target="_blank">+91 13167508</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/rahuljha" target="_blank">linkedin.com/in/rahuljha</a></p>
-    <p><em>Call me or just talk — I'm always happy to help!</em></p>
-    <p><strong>Treat me like a friend 😊</strong></p>
-  </div>
-</section>
+  <script>
+    const navLinks = document.querySelectorAll("nav a");
+    const sections = document.querySelectorAll("main section");
 
-<footer>
-  <p>Made with ❤️ by Rahul & Varsha | 2025</p>
-</footer>
+    function hideAllSections() {
+      sections.forEach(sec => {
+        if (!sec.classList.contains('visible-section')) {
+          sec.style.display = "none";
+        }
+      });
+    }
 
+    navLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        hideAllSections();
+        target.style.display = "block";
+      });
+    });
+
+    hideAllSections(); // hide all initially except contact
+  </script>
+
+  <style>
+    body { font-family: sans-serif; margin: 0; background: #fff; }
+    header.hero {
+      background: url('images/rahul_red_blazer.jpg') center/cover no-repeat;
+      color: white;
+      height: 100vh;
+      position: relative;
+    }
+    .overlay { background: rgba(0,0,0,0.6); height: 100%; padding: 2rem; }
+    nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; }
+    main { padding: 2rem; }
+    .hidden-section { display: none; }
+    .visible-section { display: block; background: #f8f8f8; padding: 1rem; }
+    .photo-category img { width: 200px; margin: 0.5rem; border-radius: 10px; }
+    .note { font-style: italic; margin-top: 1rem; color: darkgreen; }
+  </style>
 </body>
 </html>
