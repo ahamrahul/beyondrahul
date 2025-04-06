@@ -1,126 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rahul Jha | Kiln Expert Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond Rahul | Portfolio</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #fdfdfd; color: #222; line-height: 1.6; }
     header {
-      background-color: #2c3e50;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('rahul_offic_inj.jpg') no-repeat center center/cover;
       color: white;
-      padding: 2rem;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
     }
-    header img {
-      border-radius: 50%;
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border: 4px solid white;
-    }
-    h1 {
-      margin-top: 1rem;
-      font-size: 2rem;
-    }
+    header h1 { font-size: 3rem; margin-bottom: 1rem; }
+    header p { font-size: 1.2rem; }
     nav {
+      background: #222;
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
+      padding: 1rem;
     }
     nav a {
       color: white;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
     }
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .quote {
-      font-style: italic;
-      background: #ecf0f1;
-      padding: 1rem;
-      border-left: 5px solid #3498db;
-      margin-bottom: 2rem;
-    }
+    section { padding: 2rem; max-width: 1000px; margin: auto; }
+    h2 { color: #b30000; margin-bottom: 1rem; }
     .album img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      margin: 1rem;
+      width: 220px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
+    .contact-info { margin-top: 1rem; }
     footer {
-      background: #2c3e50;
-      color: white;
       text-align: center;
-      padding: 1.5rem;
-      margin-top: 2rem;
+      background: #222;
+      color: white;
+      padding: 1rem;
     }
-    .contact a {
-      color: #00aced;
-      text-decoration: none;
+    .diary-box {
+      background: #fff8f0;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="rahul_offic_inj.jpg" alt="Rahul Jha">
-    <h1>Rahul Jha - Kiln Expert & Mechanical Engineer</h1>
-    <p>Helping industries achieve kiln perfection & performance</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#album">Album</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m Rahul Jha, a mechanical engineer with hands-on expertise in rotary kiln systems, alignment, slope correction, and operational efficiency.</p>
-    <div class="quote">“Bhai, jab tak alignment sahi nahi, production tight hi rahega!”</div>
-    <div class="quote">“Jab bhi chaho baat karna, mai yahi hoon – ek dost ki tarah.”</div>
-  </section>
+<header>
+  <h1>Beyond Rahul</h1>
+  <p>Mechanical Engineer | Kiln Expert | Friendly Listener</p>
+</header>
 
-  <section id="skills">
-    <h2>Key Skills</h2>
-    <ul>
-      <li>🔥 Kiln slope correction using plan & elevation views</li>
-      <li>🌀 Shell profile & 3D thermal expansion analysis</li>
-      <li>🔧 Tyre, Roller, Chair pad alignment with live feedback</li>
-      <li>📊 Cold/Hot alignment conclusion with efficiency gain insights</li>
-    </ul>
-  </section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#album">Album</a>
+  <a href="#diary">Diary</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <section id="album">
-    <h2>Photo Album</h2>
-    <p>College Days | Work Life | Fun Moments</p>
-    <div class="album">
-      <img src="rahul jpg.jpg" alt="College Life">
-      <img src="rahul_offic_inj.jpg" alt="Work Profile">
-    </div>
-  </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hi! I’m Rahul Jha, a passionate mechanical engineer who loves to explore industrial solutions and listen to people with an open heart.</p>
+  <p>I believe in learning every day and improving step by step.</p>
+</section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p class="contact">
-      📧 Email: <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a><br>
-      📞 WhatsApp: <a href="tel:+9113167508">+91 13167508</a><br>
-      🔗 LinkedIn: <a href="https://www.linkedin.com/in/rahul-jha">rahul-jha</a>
-    </p>
-    <div class="quote">Feel free to connect – treat me like a friend. 😊</div>
-  </section>
+<section id="skills">
+  <h2>My Skills</h2>
+  <ul>
+    <li>Kiln slope correction & alignment</li>
+    <li>Plan & Elevation view setup</li>
+    <li>Floating kiln analysis for efficiency</li>
+    <li>Shell profile 3D analysis</li>
+    <li>Thermal expansion and balancing</li>
+  </ul>
+</section>
 
-  <footer>
-    Made with ❤️ by Rahul & Varsha
-  </footer>
+<section id="experience">
+  <h2>Experience</h2>
+  <p>Currently working with Allan Smith Engineering Pvt. Ltd. as a Kiln Service Engineer. Specialized in hot/cold alignment, tyre-roller grinding, and more.</p>
+</section>
+
+<section id="album">
+  <h2>My Album</h2>
+  <div class="album">
+    <img src="rahul jpg.jpg" alt="Rahul casual">
+    <img src="rahul_offic_inj.jpg" alt="Rahul office">
+    <!-- More photos can be added here later -->
+  </div>
+</section>
+
+<section id="diary">
+  <h2>My Diary</h2>
+  <div class="diary-box">
+    <p><strong>Note:</strong> This is my personal diary space. I’ll keep adding my poetry, thoughts, and travel stories here!</p>
+    <p>— Stay connected ❤️</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-info">
+    <p>Email: <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/9113167508" target="_blank">+91 13167508</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/rahuljha" target="_blank">linkedin.com/in/rahuljha</a></p>
+    <p><em>Call me or just talk — I'm always happy to help!</em></p>
+    <p><strong>Treat me like a friend 😊</strong></p>
+  </div>
+</section>
+
+<footer>
+  <p>Made with ❤️ by Rahul & Varsha | 2025</p>
+</footer>
+
 </body>
 </html>
