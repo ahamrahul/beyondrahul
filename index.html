@@ -2,156 +2,101 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rahul Jha | Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f8f8;
-      color: #333;
-    }
-
-    header,
-    footer {
-      background-color: #222;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #444;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-
-    section {
-      padding: 2rem;
-    }
-
-    .about p {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .read-more {
-      display: none;
-    }
-
-    .slider img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-
-    .contact-form {
-      max-width: 600px;
-      margin: auto;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-    }
-
-    button {
-      background: #444;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond Rahul - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <h1>Rahul Jha</h1>
-    <p>Mechanical Engineer | Kiln Specialist | Tech Enthusiast</p>
+    <h1>Beyond Rahul</h1>
+    <p>Dynamic Mechanical Engineer & AI Enthusiast</p>
   </header>
 
+  <section class="slider">
+    <img src="album/professional/photo1.jpg" alt="Slider Image 1">
+    <img src="album/professional/photo2.jpg" alt="Slider Image 2">
+    <img src="album/professional/photo3.jpg" alt="Slider Image 3">
+    <img src="album/personal/photo4.jpg" alt="Slider Image 4">
+  </section>
+
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#notes">Notes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
-  <section id="home">
-    <div class="slider">
-      <img src="images/photo1.jpg" alt="Slide 1" />
-      <img src="images/photo2.jpg" alt="Slide 2" />
-      <img src="images/photo3.jpg" alt="Slide 3" />
-      <img src="images/photo4.jpg" alt="Slide 4" />
+  <section id="about">
+    <h2>Professional Journey</h2>
+    <p>Dynamic Mechanical Engineer with 4+ years of expertise in kiln alignment, rotary equipment maintenance, and AI-driven industrial processes. Proven ability to optimize kiln performance, improve operational efficiency, and integrate advanced technologies like AI and Python-based analytics for predictive maintenance. Strong problem-solving skills, adaptability, and commitment to Industry 4.0 innovations.</p>
+    <button onclick="toggleFullStory()">Read More</button>
+    <div id="fullStory" style="display: none;">
+      <p>My name is Rahul, born and brought up in a middle-class Hindu Brahmin family in Mithila, Bihar... [Full story as previously provided]</p>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      Dynamic Mechanical Engineer with 4+ years of expertise in kiln alignment,
-      rotary equipment maintenance, and AI-driven industrial processes.
-      <span id="more" class="read-more">
-        Proven ability to optimize kiln performance, improve operational efficiency, and integrate advanced technologies like AI and Python-based analytics for predictive maintenance. Strong problem-solving skills, adaptability, and commitment to Industry 4.0 innovations. Born and brought up in Mithila, Bihar, I completed B.Sc. in PCM and B.Tech in Mechanical Engineering from RTU. I started my journey through challenges, worked with JSW under a contractor, and realized the power of technology. Later, I worked with top companies like Tata Steel, Reliance, Aditya Birla, and more via Allan Smith Engineering Pvt. Ltd. I’m always curious, always learning.
-      </span>
-      <a href="#" onclick="toggleMore(); return false;">Read More</a>
-    </p>
+  <section id="skills">
+    <h2>Key Skills & Expertise</h2>
+    <ul>
+      <li>Kiln or Rotary Drum Erection and Commissioning</li>
+      <li>Kiln Alignment & Maintenance: Hot & Cold Alignment, Shell Profiling, Girth Gear Alignment, Deflection Correction</li>
+      <li>Technical Tools: Auto Level, Total Station, Roto-Dia, Shell Ovality Sensor, Disto Meter</li>
+      <li>Software & AI Integration: Python, SolidWorks, MS Office</li>
+      <li>Predictive Maintenance</li>
+      <li>Project Coordination</li>
+      <li>AI-Driven Maintenance Strategies</li>
+      <li>Languages: Hindi, English, Maithili</li>
+    </ul>
   </section>
 
   <section id="projects">
-    <h2>Projects & Clients</h2>
-    <p>
-      Tata Steel, NCL, Vishnu Chemical, Balarsha Paper Mill, Godavari Ispat,
-      Hindalco, Loydes, Reliance, Birla Carbon, Silox, Andritz, Andhra Paper,
-      Gaillant, Girdhan Metal, Jindal Saw, Epsilon Carbon, Shyam Steel, SRF, and many more.
-    </p>
+    <h2>Projects</h2>
+    <p>Worked with the following companies:</p>
+    <p>Tata Steel, NCL (Nagarjuna Cement), Vishnu Chemical, Balarsha Paper Mill, Godavari Ispat and Power, Hindalco, Lloyds, Reliance, Birla Carbon, Silox, Andritz, Andhra Paper Mill, Gaillant, Girdhan Metal, Jindal Saw, Epsilon Carbon, Shyam Steel, SRF, and many more.</p>
+  </section>
 
-    <h3>Key Skills & Expertise</h3>
-    <ul>
-      <li>✔ Kiln or Rotary Drum Erection & Commissioning</li>
-      <li>✔ Kiln Alignment & Maintenance: Hot/Cold, Girth Gear, Shell Profiling</li>
-      <li>✔ Tools: Auto Level, Total Station, Roto-Dia, Shell Ovality Sensor</li>
-      <li>✔ AI & Python: NumPy, Pandas, Matplotlib, Predictive Maintenance</li>
-      <li>✔ SolidWorks, MS Office</li>
-      <li>✔ Process Optimization & AI-Driven Maintenance</li>
-      <li>✔ Languages: Hindi, English, Maithili</li>
-    </ul>
+  <section id="notes">
+    <h2>Notes & Thoughts</h2>
+    <p>“Smile is the best treatment.”<br>
+    “Believe me, I’m a good listener.”<br>
+    “I’m happy to help you, and you’ll be happy to talk with me.”</p>
+    <p>You can upload your personal thoughts or poems in the <code>notes/</code> folder.</p>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Mobile/WhatsApp: <strong>+91 9113167508</strong></p>
-    <p>Email: <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/rahul-jha" target="_blank">linkedin.com/in/rahul-jha</a></p>
+    <p><strong>Phone & WhatsApp:</strong> +91 9113167508</p>
+    <p><strong>Email:</strong> <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rahuljha" target="_blank">linkedin.com/in/rahuljha</a></p>
 
-    <div class="contact-form">
-      <form action="mailto:ahamrahuljha@gmail.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+    <form action="#" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
-    <p>Thank you for visiting! I'm happy to help and even happier to talk with you, because a smile is the best treatment. Believe me, I’m a good listener :)</p>
+    <p>&copy; 2025 Rahul Jha | Beyond Rahul</p>
   </footer>
 
   <script>
-    function toggleMore() {
-      const moreText = document.getElementById('more');
-      moreText.style.display = moreText.style.display === 'inline' ? 'none' : 'inline';
+    function toggleFullStory() {
+      const story = document.getElementById('fullStory');
+      story.style.display = story.style.display === 'none' ? 'block' : 'none';
     }
   </script>
 </body>
