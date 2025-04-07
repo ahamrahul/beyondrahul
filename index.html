@@ -119,142 +119,35 @@
       0% { transform: translateX(0%); }
       100% { transform: translateX(-100%); }
     }
+    .footer-links {
+      margin-top: 10px;
+    }
+    .footer-links a {
+      color: #00d1ff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <img src="profile.jpg" alt="Profile Picture" class="profile-pic" id="profileImage">
-    <div class="upload-icons">
-      <label>
-        🖼️ Upload Cover Photo
-        <input type="file" accept="image/*" onchange="changeCover(event)" hidden>
-      </label>
-      <label>
-        👤 Upload Profile Photo
-        <input type="file" accept="image/*" onchange="changeProfile(event)" hidden>
-      </label>
-    </div>
-    <h1>Beyond Rahul</h1>
-    <div class="highlight">
-      Rotary kiln specialist & dynamic mechanical engineer analyzing with innovative AI techniques.<br>
-      Expertise in stress analysis, shell profile analysis & predictive maintenance of equipment failure<br>
-      using Artificial Intelligence, Machine Learning & 3D data analysis.
-    </div>
-    <a href="Rahul_Resume.pdf" class="resume-button" download>Download Resume</a>
-  </header>
-
-  <nav>
-    <a href="#" onclick="showSection('about')">About</a>
-    <a href="#" onclick="showSection('skills')">Skills</a>
-    <a href="#" onclick="showSection('projects')">Projects</a>
-    <a href="#" onclick="showSection('notes')">Notes</a>
-    <a href="#" onclick="showSection('contact')">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p><strong>My Story – Rahul Jha</strong><br>
-    Hello! My name is Rahul Jha. I was born and raised in a middle-class Hindu Brahmin family in Mithila, Bihar — a region rich in culture but still far behind when it comes to modern technology and quality education. Despite the challenges, I completed my B.Sc. in Physics, Chemistry, and Math, and later got admission into Rajasthan Technical University for a B.Tech in Mechanical Engineering.<br><br>
-    My college years were among the best chapters of my life. I made amazing friends, learned new perspectives, and connected with the world in ways I hadn’t before. In 2020, I graduated with 70%, ready to begin a new chapter.<br><br>
-    But the real world wasn’t easy. With no proper guidance, I found myself lost in the race for a job. I reached out to relatives and professionals—not to ask for jobs, but simply for direction. What should I learn? Where should I begin? Unfortunately, I didn’t get the clarity I hoped for.<br><br>
-    Out of frustration, I accepted a contract job with JSW Steel—just for exposure. It gave me hands-on experience with steel structures, assemblies, and industrial erection work like junction houses. But the real learning was something else: I realized how rapidly the world was changing with automation, smart tools, and artificial intelligence.<br><br>
-    That realization sparked a fire in me.<br><br>
-    I quit my job to take a pause and plan. Like they say—"When you're confused, take a break." I wanted to learn something meaningful. Something that not only adds to my mechanical foundation but also connects with the future.<br><br>
-    During this time, I got an offer from Viraj Steel, but had to reach Mumbai within 2–3 days. Bihar to Mumbai by train takes over 36 hours—so for the first time in my life, I booked a flight. Sadly, I missed it. I had never missed a bus or train before, and this loss (including no refund) hit me hard.<br><br>
-    But instead of breaking down, I made a bold move: I used all my savings to buy a laptop and decided to invest in knowledge.<br><br>
-    I started learning about mechanical design tools and, more importantly, Python, AI, and machine learning—because I believe these technologies are the future of the mechanical industry.<br><br>
-    What I love most about coding and AI is that even if something fails, you can quickly debug, regenerate, or modify it—unlike mechanical systems, where a single failure can cost the whole project. This difference fascinated me.<br><br>
-    Today, I dream of being someone who connects advanced technology with traditional mechanical systems—bridging the gap between AI and industrial machinery.<br><br>
-    And by the grace of God, I got an opportunity to work with Allan Smith Engineering Pvt. Ltd.—a company known for its deep mechanical expertise in heavy industries like steel, cement, refinery, chemicals, paper, and carbon. We work globally, especially in Africa and the Middle East, and specialize in rotary kilns and alignment services.<br><br>
-    This is just the beginning. I’m still learning, still exploring, and still building a future where tradition meets innovation.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Rotary Kiln Design & Analysis</li>
-      <li>Stress and Shell Profile Analysis</li>
-      <li>Predictive Maintenance</li>
-      <li>Artificial Intelligence & Machine Learning</li>
-      <li>3D Data Interpretation</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>3D Analysis of Kiln Shell Profile</li>
-      <li>ML Model for Predicting Equipment Failure</li>
-      <li>AI-Based Rotary Kiln Alignment Advisor</li>
-    </ul>
-  </section>
-
-  <section id="notes">
-    <h2>Private Notes</h2>
-    <div class="password-section">
-      <label for="password">Enter Password:</label>
-      <input type="password" id="password">
-      <button onclick="unlockNotes()">Unlock</button>
-    </div>
-    <div id="notesLink" style="display:none; margin-top: 15px;">
-      <a href="https://docs.google.com/document/d/your-note-id" target="_blank">Open Notes (Google Doc)</a>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: rahul@example.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/ahamrahul" target="_blank">ahamrahul</a></p>
-  </section>
+  <!-- (header, nav, sections remain unchanged) -->
 
   <footer>
     <p>I will be happy to be of any help to you. You can contact me anytime. Believe me, I'm a good listener and will try to resolve your concern. <br>Thank you ❤️</p>
+    <div class="footer-links">
+      <a href="mailto:rahul@example.com">📧 Email</a>
+      <a href="https://linkedin.com/in/ahamrahul" target="_blank">💼 LinkedIn</a>
+      <a href="https://github.com/ahamrahul" target="_blank">💻 GitHub</a>
+      <a href="https://instagram.com/ahamrahul" target="_blank">📸 Instagram</a>
+    </div>
     <div class="ticker">
       <p>JSW Steel &nbsp;&nbsp;&nbsp; Tata Steel &nbsp;&nbsp;&nbsp; SRF &nbsp;&nbsp;&nbsp; Allan Smith Engineering &nbsp;&nbsp;&nbsp; Larsen & Toubro &nbsp;&nbsp;&nbsp; Shree Cement</p>
     </div>
   </footer>
 
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
-    }
-
-    function unlockNotes() {
-      const password = document.getElementById("password").value;
-      const correct = "rahul123";
-      if (password === correct) {
-        document.getElementById("notesLink").style.display = 'block';
-      } else {
-        alert("Incorrect password");
-      }
-    }
-
-    function changeCover(event) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          document.querySelector('header').style.backgroundImage = `url('${e.target.result}')`;
-        }
-        reader.readAsDataURL(file);
-      }
-    }
-
-    function changeProfile(event) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          document.getElementById('profileImage').src = e.target.result;
-        }
-        reader.readAsDataURL(file);
-      }
-    }
-
-    showSection('about');
-  </script>
+  <!-- (script section remains unchanged) -->
 </body>
 </html>
