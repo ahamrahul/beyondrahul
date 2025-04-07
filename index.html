@@ -1,104 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beyond Rahul - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Beyond Rahul</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+    }
+    header {
+      background: url('cover.jpg') no-repeat center center/cover;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 15px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #111;
+      padding: 10px 0;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+    nav a {
+      color: #00d1ff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    section {
+      display: none;
+      padding: 30px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    section.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .highlight {
+      font-size: 1.2em;
+      margin-top: 20px;
+      background-color: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .password-section input {
+      padding: 5px;
+      margin-right: 10px;
+    }
+  </style>
 </head>
-
 <body>
   <header>
-    <h1>Beyond Rahul</h1>
-    <p>Dynamic Mechanical Engineer & AI Enthusiast</p>
+    <div>
+      <h1>Beyond Rahul</h1>
+      <div class="highlight">
+        Rotary kiln specialist & dynamic mechanical engineer analyzing with innovative AI techniques.<br>
+        Expertise in stress analysis, shell profile analysis & predictive maintenance of equipment failure<br>
+        using Artificial Intelligence, Machine Learning & 3D data analysis.
+      </div>
+    </div>
   </header>
 
-  <section class="slider">
-    <img src="album/professional/photo1.jpg" alt="Slider Image 1">
-    <img src="album/professional/photo2.jpg" alt="Slider Image 2">
-    <img src="album/professional/photo3.jpg" alt="Slider Image 3">
-    <img src="album/personal/photo4.jpg" alt="Slider Image 4">
-  </section>
-
   <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#notes">Notes</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('skills')">Skills</a>
+    <a href="#" onclick="showSection('projects')">Projects</a>
+    <a href="#" onclick="showSection('notes')">Notes</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
   </nav>
 
   <section id="about">
-    <h2>Professional Journey</h2>
-    <p>Dynamic Mechanical Engineer with 4+ years of expertise in kiln alignment, rotary equipment maintenance, and AI-driven industrial processes. Proven ability to optimize kiln performance, improve operational efficiency, and integrate advanced technologies like AI and Python-based analytics for predictive maintenance. Strong problem-solving skills, adaptability, and commitment to Industry 4.0 innovations.</p>
-    <button onclick="toggleFullStory()">Read More</button>
-    <div id="fullStory" style="display: none;">
-      <p>My name is Rahul, born and brought up in a middle-class Hindu Brahmin family in Mithila, Bihar... [Full story as previously provided]</p>
-    </div>
+    <h2>About Me</h2>
+    <p>Hi, I’m Rahul — a rotary kiln specialist with a dynamic approach to mechanical engineering. I integrate AI-driven techniques to ensure predictive maintenance and performance optimization.</p>
   </section>
 
   <section id="skills">
-    <h2>Key Skills & Expertise</h2>
+    <h2>Skills</h2>
     <ul>
-      <li>Kiln or Rotary Drum Erection and Commissioning</li>
-      <li>Kiln Alignment & Maintenance: Hot & Cold Alignment, Shell Profiling, Girth Gear Alignment, Deflection Correction</li>
-      <li>Technical Tools: Auto Level, Total Station, Roto-Dia, Shell Ovality Sensor, Disto Meter</li>
-      <li>Software & AI Integration: Python, SolidWorks, MS Office</li>
+      <li>Rotary Kiln Design & Analysis</li>
+      <li>Stress and Shell Profile Analysis</li>
       <li>Predictive Maintenance</li>
-      <li>Project Coordination</li>
-      <li>AI-Driven Maintenance Strategies</li>
-      <li>Languages: Hindi, English, Maithili</li>
+      <li>Artificial Intelligence & Machine Learning</li>
+      <li>3D Data Interpretation</li>
     </ul>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <p>Worked with the following companies:</p>
-    <p>Tata Steel, NCL (Nagarjuna Cement), Vishnu Chemical, Balarsha Paper Mill, Godavari Ispat and Power, Hindalco, Lloyds, Reliance, Birla Carbon, Silox, Andritz, Andhra Paper Mill, Gaillant, Girdhan Metal, Jindal Saw, Epsilon Carbon, Shyam Steel, SRF, and many more.</p>
+    <ul>
+      <li>3D Analysis of Kiln Shell Profile</li>
+      <li>ML Model for Predicting Equipment Failure</li>
+      <li>AI-Based Rotary Kiln Alignment Advisor</li>
+    </ul>
   </section>
 
   <section id="notes">
-    <h2>Notes & Thoughts</h2>
-    <p>“Smile is the best treatment.”<br>
-    “Believe me, I’m a good listener.”<br>
-    “I’m happy to help you, and you’ll be happy to talk with me.”</p>
-    <p>You can upload your personal thoughts or poems in the <code>notes/</code> folder.</p>
+    <h2>Private Notes</h2>
+    <div class="password-section">
+      <label for="password">Enter Password:</label>
+      <input type="password" id="password">
+      <button onclick="unlockNotes()">Unlock</button>
+    </div>
+    <div id="notesLink" style="display:none; margin-top: 15px;">
+      <a href="https://docs.google.com/document/d/your-note-id" target="_blank">Open Notes (Google Doc)</a>
+    </div>
   </section>
 
   <section id="contact">
-    <h2>Contact Me</h2>
-    <p><strong>Phone & WhatsApp:</strong> +91 9113167508</p>
-    <p><strong>Email:</strong> <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rahuljha" target="_blank">linkedin.com/in/rahuljha</a></p>
-
-    <form action="#" method="POST">
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Your Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
+    <h2>Contact</h2>
+    <p>Email: rahul@example.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/ahamrahul" target="_blank">ahamrahul</a></p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Rahul Jha | Beyond Rahul</p>
-  </footer>
-
   <script>
-    function toggleFullStory() {
-      const story = document.getElementById('fullStory');
-      story.style.display = story.style.display === 'none' ? 'block' : 'none';
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
     }
+
+    function unlockNotes() {
+      const password = document.getElementById("password").value;
+      const correct = "rahul123";  // you can change this password
+      if (password === correct) {
+        document.getElementById("notesLink").style.display = 'block';
+      } else {
+        alert("Incorrect password");
+      }
+    }
+
+    // Show About section by default
+    showSection('about');
   </script>
 </body>
-
 </html>
