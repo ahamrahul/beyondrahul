@@ -1,29 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beyond Rahul</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to right, #1e3c72, #2a5298);
-      color: white;
-    }
-    header {
-      background: url('cover.jpg') no-repeat center center/cover;
+}
+header {
+background: url('cover.jpg') no-repeat center center/cover;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 60vh;
       position: relative;
-      text-align: center;
-      padding: 20px;
-    }
-    header h1 {
-      font-size: 2.5em;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 15px;
+text-align: center;
+padding: 20px;
+}
+@@ -26,6 +24,29 @@
+background: rgba(0, 0, 0, 0.5);
+padding: 20px;
+border-radius: 15px;
       display: inline-block;
       margin-top: 60px;
     }
@@ -47,47 +37,13 @@
       display: block;
       cursor: pointer;
       margin-bottom: 5px;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      background-color: #111;
-      padding: 10px 0;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-    }
-    nav a {
-      color: #00d1ff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-    section {
-      display: none;
-      padding: 30px;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-    section.active {
-      display: block;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    .highlight {
-      font-size: 1.2em;
-      margin-top: 20px;
-      background-color: rgba(0,0,0,0.5);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .password-section input {
-      padding: 5px;
-      margin-right: 10px;
-    }
+}
+nav {
+display: flex;
+@@ -67,18 +88,59 @@
+padding: 5px;
+margin-right: 10px;
+}
     .resume-button {
       display: inline-block;
       margin-top: 20px;
@@ -119,38 +75,88 @@
       0% { transform: translateX(0%); }
       100% { transform: translateX(-100%); }
     }
-    .footer-links {
-      margin-top: 10px;
-    }
-    .footer-links a {
-      color: #00d1ff;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-  </style>
+</style>
 </head>
 <body>
-  <!-- (header, nav, sections remain unchanged) -->
+<header>
+    <div>
+      <h1>Beyond Rahul</h1>
+      <div class="highlight">
+        Rotary kiln specialist & dynamic mechanical engineer analyzing with innovative AI techniques.<br>
+        Expertise in stress analysis, shell profile analysis & predictive maintenance of equipment failure<br>
+        using Artificial Intelligence, Machine Learning & 3D data analysis.
+      </div>
+    <img src="profile.jpg" alt="Profile Picture" class="profile-pic" id="profileImage">
+    <div class="upload-icons">
+      <label>
+        🖼️ Upload Cover Photo
+        <input type="file" accept="image/*" onchange="changeCover(event)" hidden>
+      </label>
+      <label>
+        👤 Upload Profile Photo
+        <input type="file" accept="image/*" onchange="changeProfile(event)" hidden>
+      </label>
+</div>
+    <h1>Beyond Rahul</h1>
+    <div class="highlight">
+      Rotary kiln specialist & dynamic mechanical engineer analyzing with innovative AI techniques.<br>
+      Expertise in stress analysis, shell profile analysis & predictive maintenance of equipment failure<br>
+      using Artificial Intelligence, Machine Learning & 3D data analysis.
+    </div>
+    <a href="Rahul_Resume.pdf" class="resume-button" download>Download Resume</a>
+</header>
+
+<nav>
+@@ -132,6 +194,13 @@ <h2>Contact</h2>
+<p>LinkedIn: <a href="https://linkedin.com/in/ahamrahul" target="_blank">ahamrahul</a></p>
+</section>
 
   <footer>
     <p>I will be happy to be of any help to you. You can contact me anytime. Believe me, I'm a good listener and will try to resolve your concern. <br>Thank you ❤️</p>
-    <div class="footer-links">
-      <a href="mailto:ahamrahul.official@gmail.com">📧 Email</a>
-      <a href="https://linkedin.com/in/ahamrahul" target="_blank">💼 LinkedIn</a>
-      <a href="https://github.com/ahamrahul" target="_blank">💻 GitHub</a>
-      <a href="https://instagram.com/ahamrahul" target="_blank">📸 Instagram</a>
-      <a href="https://youtube.com/@ahamrahul" target="_blank">▶️ YouTube</a>
-      <a href="https://twitter.com/ahamrahul" target="_blank">🐦 Twitter</a>
-      <a href="/path/to/rahul_resume.pdf" target="_blank" download>📄 Resume</a>
-    </div>
     <div class="ticker">
       <p>JSW Steel &nbsp;&nbsp;&nbsp; Tata Steel &nbsp;&nbsp;&nbsp; SRF &nbsp;&nbsp;&nbsp; Allan Smith Engineering &nbsp;&nbsp;&nbsp; Larsen & Toubro &nbsp;&nbsp;&nbsp; Shree Cement</p>
     </div>
   </footer>
 
-  <!-- (script section remains unchanged) -->
+<script>
+function showSection(id) {
+document.querySelectorAll('section').forEach(section => {
+@@ -142,15 +211,36 @@ <h2>Contact</h2>
+
+function unlockNotes() {
+const password = document.getElementById("password").value;
+      const correct = "rahul123";  // you can change this password
+      const correct = "rahul123";
+if (password === correct) {
+document.getElementById("notesLink").style.display = 'block';
+} else {
+alert("Incorrect password");
+}
+}
+
+    // Show About section by default
+    function changeCover(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.querySelector('header').style.backgroundImage = `url('${e.target.result}')`;
+        }
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function changeProfile(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById('profileImage').src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+      }
+    }
+
+showSection('about');
+</script>
 </body>
-</html>
