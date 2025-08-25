@@ -1,72 +1,192 @@
-/* Style for Smith Task Portal */
 
+/* General Reset & Fonts */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    text-align: center;
-    color: white;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.1);
+  background: #333;
+  background-color: #1a1a2e;
+color: #fff;
+  padding: 1em 0;
+  padding: 30px 0;
+text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.logo {
-    height: 100px;
-    position: absolute;
-    right: 20px;
-    top: 30px;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-.cover-photo {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
-.portal-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    flex-wrap: wrap;
+/* Slideshow */
+.slideshow {
+  margin: 20px 0;
+  display: flex;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.portal {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px 30px;
-    margin: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    transition: 0.3s;
+.slideshow img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
 }
 
-.portal:hover {
-    background: rgba(255, 255, 255, 0.5);
+/* About Section */
+.about {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.welcome-message {
-    margin-top: 20px;
-    font-size: 22px;
-    font-weight: bold;
-    padding: 10px;
+.about h2 {
+  margin-top: 0;
+  color: #1a1a2e;
 }
 
+.read-more-content {
+  display: none;
+  margin-top: 10px;
+  color: #444;
+}
+
+.read-more-btn {
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #1a1a2e;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Projects, Skills, Notes */
+.section {
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+nav {
+  background: #444;
+  padding: 0.5em;
+
+.section h2 {
+  color: #1a1a2e;
+  margin-top: 0;
+}
+
+/* Contact */
+.contact {
+  background-color: #1a1a2e;
+  color: #fff;
+  padding: 40px 20px;
+text-align: center;
+  border-top: 4px solid #00bcd4;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+
+.contact h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.contact-info {
+  margin: 20px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact a {
+  color: #00bcd4;
+text-decoration: none;
+}
+section {
+  padding: 20px;
+  margin: 10px;
+  background: white;
+  border-radius: 8px;
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Message Form */
+form {
+  margin-top: 20px;
+  display: grid;
+  gap: 12px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.gallery img {
+  height: 150px;
+  margin: 10px;
+  border-radius: 8px;
+
+form button {
+  background-color: #00bcd4;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0097a7;
+}
+
+/* Footer */
 footer {
-    margin-top: 50px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-/* Add new rule for Our Technical Experts heading */
-.experts h2 {
-    color: black;
-    font-weight: bold;
+  background: #333;
+  color: #fff;
+  background-color: #111;
+  color: #aaa;
+text-align: center;
+  padding: 1em 0;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 30px;
 }
