@@ -1,80 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rahul Jha | My Journey</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Rahul Jha</h1>
-    <p>Mechanical Engineer | Kiln Specialist | AI Enthusiast</p>
-  </header>
+<div class="password-section">
+<label for="password">Enter Password:</label>
+<input type="password" id="password">
+      <button onclick="unlockNotes(xyz)">Unlock</button>
+      <button onclick="unlockNotes()">Unlock</button>
+</div>
+<div id="notesLink" style="display:none; margin-top: 15px;">
+<a href="https://docs.google.com/document/d/your-note-id" target="_blank">Open Notes (Google Doc)</a>
+</div>
+</section>
 
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#skills">My Skills</a>
-    <a href="#hobbies">Hobbies</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-    <a href="#message">Message</a>
-  </nav>
+<section id="contact">
+<h2>Contact</h2>
+<p>Mobile/WhatsApp: <strong>+91 9113167508</strong></p>
+<p>Email: <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/ahamrahul" target="_blank">linkedin.com/in/rahul-jha</a></p>
+</section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hello! I’m Rahul Jha from Bihar. I completed my Mechanical Engineering from RTU (2020).
-      I’ve worked at JSW Steel and currently at Allan Smith Engineering Pvt. Ltd.
-      Passionate about combining Mechanical Engineering with AI.
-    </p>
-  </section>
+<footer>
+<p>I will be happy to be of any help to you. You can contact me anytime. Believe me, I'm a good listener and will try to resolve your concern. <br>Thank you ❤️</p>
+<div class="ticker">
+<p>
+Andhra Paper &nbsp;&nbsp;&nbsp; Andritz &nbsp;&nbsp;&nbsp; Allan Smith Engineering &nbsp;&nbsp;&nbsp; Balarsha Paper Mill &nbsp;&nbsp;&nbsp; Birla Carbon &nbsp;&nbsp;&nbsp; Epsilon Carbon &nbsp;&nbsp;&nbsp; Gaillant &nbsp;&nbsp;&nbsp; Girdhan Metal &nbsp;&nbsp;&nbsp; Godavari Ispat &nbsp;&nbsp;&nbsp; Hindalco &nbsp;&nbsp;&nbsp; Jindal Saw &nbsp;&nbsp;&nbsp; JSW Steel &nbsp;&nbsp;&nbsp; Larsen & Toubro &nbsp;&nbsp;&nbsp; Loydes &nbsp;&nbsp;&nbsp; NCL &nbsp;&nbsp;&nbsp; Reliance &nbsp;&nbsp;&nbsp; Shree Cement &nbsp;&nbsp;&nbsp; Shyam Steel &nbsp;&nbsp;&nbsp; Silox &nbsp;&nbsp;&nbsp; SRF &nbsp;&nbsp;&nbsp; Tata Steel &nbsp;&nbsp;&nbsp; Vishnu Chemical
+</p>
+</div>
+</footer>
 
-  <section id="skills">
-    <h2>My Skills & Expertise</h2>
-    <ul>
-      <li>Rotary Kiln Alignment</li>
-      <li>Hot & Cold Kiln Services</li>
-      <li>SolidWorks & Design</li>
-      <li>Python for Engineering Applications</li>
-      <li>Basic AI & ML Understanding</li>
-    </ul>
-  </section>
+<script>
+function showSection(id) {
+document.querySelectorAll('section').forEach(section => {
+section.classList.remove('active');
+});
+document.getElementById(id).classList.add('active');
+}
 
-  <section id="hobbies">
-    <h2>Hobbies</h2>
-    <ul>
-      <li>✍️ Shayari – Expressing feelings through words</li>
-      <li>🌍 Traveling – Exploring nature and new places</li>
-      <li>📸 Photography – Capturing memories</li>
-    </ul>
-  </section>
+function unlockNotes() {
+const password = document.getElementById("password").value;
+const correct = "rahul123";
+if (password === correct) {
+document.getElementById("notesLink").style.display = 'block';
+} else {
+alert("Incorrect password");
+}
+}
 
-  <section id="gallery">
-    <h2>My Photos</h2>
-    <div class="gallery">
-      <img src="assets/images/photo1.jpg" alt="Me 1">
-      <img src="assets/images/photo2.jpg" alt="Me 2">
-      <img src="assets/images/photo3.jpg" alt="Work site">
-    </div>
-  </section>
+function changeCover(event) {
+const file = event.target.files[0];
+if (file) {
+const reader = new FileReader();
+reader.onload = function(e) {
+document.querySelector('header').style.backgroundImage = `url('${e.target.result}')`;
+}
+reader.readAsDataURL(file);
+}
+}
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: rahul.jha@email.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/rahul-jha" target="_blank">My Profile</a></p>
-  </section>
+function changeProfile(event) {
+const file = event.target.files[0];
+if (file) {
+const reader = new FileReader();
+reader.onload = function(e) {
+document.getElementById('profileImage').src = e.target.result;
+}
+reader.readAsDataURL(file);
+}
+}
 
-  <section id="message">
-    <h2>A Friendly Note</h2>
-    <p>
-      I'm happy to help you if you want to share something or just be a friend.
-      Trust me, I'm a good listener. Haha! 😄
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2025 Rahul Jha. All rights reserved.</p>
-  </footer>
+showSection('about');
+</script>
 </body>
 </html>
