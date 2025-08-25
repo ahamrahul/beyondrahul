@@ -1,258 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beyond Rahul</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to right, #1e3c72, #2a5298);
-      color: white;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Allan Smith Task Portal</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+/* Header with cover photo as background */
+header {
+    position: relative;
+    background-image: url('cover-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Logo positioned over the cover photo */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 100px; /* Adjust size as needed */
+}
+.portal-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.portal {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.portal:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+.welcome-message {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+}
+.site-status {
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+.experts {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+/* Override the experts heading: bold and black */
+.experts h2 {
+    color: black !important;
+    font-weight: bold !important;
+}
+.expert-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.expert-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.expert-details {
+    text-align: left;
+    color: #ffff00; /* Expert details remain in yellow */
+}
+#sheet-container {
+    display: none;
+    margin-top: 20px;
+}
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 600px) {
+    .portal-container {
+        flex-direction: column;
+        align-items: center;
     }
-    header {
-      background: url('cover.jpg') no-repeat center center/cover;
-      height: 60vh;
-      position: relative;
-      text-align: center;
-      padding: 20px;
+    .logo {
+        height: 60px;
+        top: 10px;
+        left: 10px;
     }
-    header h1 {
-      font-size: 2.5em;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 15px;
-      display: inline-block;
-      margin-top: 60px;
-    }
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid white;
-      object-fit: cover;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
-    .upload-icons {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      text-align: right;
-    }
-    .upload-icons label {
-      display: block;
-      cursor: pointer;
-      margin-bottom: 5px;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      background-color: #111;
-      padding: 10px 0;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-    }
-    nav a {
-      color: #00d1ff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-    section {
-      display: none;
-      padding: 30px;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-    section.active {
-      display: block;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    .highlight {
-      font-size: 1.2em;
-      margin-top: 20px;
-      background-color: rgba(0,0,0,0.5);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .password-section input {
-      padding: 5px;
-      margin-right: 10px;
-    }
-    .resume-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #00d1ff;
-      color: black;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-    }
-    footer {
-      background-color: #000000a0;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.95em;
-    }
-    .ticker {
-      margin-top: 10px;
-      white-space: nowrap;
-      overflow: hidden;
-      box-sizing: border-box;
-    }
-    .ticker p {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll 15s linear infinite;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
-    }
-  </style>
+}
+</style>
 </head>
 <body>
-  <header>
-    <img src="profile.jpg" alt="Profile Picture" class="profile-pic" id="profileImage">
-    <div class="upload-icons">
-      <label>
-        <input type="file" accept="image/*" onchange="changeCover(event)" hidden>
-      </label>
-      <label>
-        <input type="file" accept="image/*" onchange="changeProfile(event)" hidden>
-      </label>
-    </div>
-    <h1>Beyond Rahul</h1>
-    <div class="highlight">
-      Rotary kiln specialist & dynamic mechanical engineer analyzing with innovative AI techniques.<br>
-      Expertise in stress analysis, shell profile analysis & predictive maintenance of equipment failure<br>
-      using Artificial Intelligence, Machine Learning & 3D data analysis.
-    </div>
-    <a href="Rahul_Resume.pdf" class="resume-button" download>Download Resume</a>
-  </header>
+<!-- Header with cover photo background and logo -->
+<header>
+<img src="logo.png" alt="Company Logo" class="logo">
+</header>
 
-  <nav>
-    <a href="#" onclick="showSection('about')">About</a>
-    <a href="#" onclick="showSection('skills')">Skills</a>
-    <a href="#" onclick="showSection('projects')">Projects</a>
-    <a href="#" onclick="showSection('notes')">Notes</a>
-    <a href="#" onclick="showSection('contact')">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi, I’m Rahul — a rotary kiln specialist with a dynamic approach to mechanical engineering. I integrate AI-driven techniques to ensure predictive maintenance and performance optimization.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Stress and Shell Profile Analysis</li>
-      <li>Predictive Maintenance</li>
-      <li>Artificial Intelligence & Machine Learning</li>
-      <li>3D Data Interpretation</li>
-      <li>✔ Kiln or Rotary Drum Erection & Commissioning</li>
-       <li>✔ Kiln Alignment & Maintenance: Hot/Cold, Girth Gear, Shell Profiling</li>
-       <li>✔ Tools: Auto Level, Total Station, Roto-Dia, Shell Ovality Sensor</li>
-       <li>✔ AI & Python: NumPy, Pandas, Matplotlib, Predictive Maintenance</li>
-       <li>✔ SolidWorks, MS Office</li>
-       <li>✔ Process Optimization & AI-Driven Maintenance</li>
-       <li>✔ Languages: Hindi, English, Maithili</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-    <li>Kiln slope correction & alignment</li>
-     <li>Plan & Elevation view setup</li>
-     <li>Floating kiln analysis for efficiency</li>
-     <li>Shell profile 3D analysis</li>
-     <li>Thermal expansion and balancing</li>
-      <li>ML Model for Predicting Equipment Failure</li>
-      <li>AI-Based Rotary Kiln Alignment Advisor</li>
-    </ul>
-  </section>
-
-  <section id="notes">
-    <h2>Private Notes</h2>
-    <div class="password-section">
-      <label for="password">Enter Password:</label>
-      <input type="password" id="password">
-      <button onclick="unlockNotes()">Unlock</button>
-    </div>
-    <div id="notesLink" style="display:none; margin-top: 15px;">
-      <a href="https://docs.google.com/document/d/your-note-id" target="_blank">Open Notes (Google Doc)</a>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-   <p>Mobile/WhatsApp: <strong>+91 9113167508</strong></p>
-     <p>Email: <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a></p>
-     <p>LinkedIn: <a href="https://www.linkedin.com/in/ahamrahul" target="_blank">linkedin.com/in/rahul-jha</a></p>
-  </section>
-
-  <footer>
-    <p>I will be happy to be of any help to you. You can contact me anytime. Believe me, I'm a good listener and will try to resolve your concern. <br>Thank you ❤️</p>
-    <div class="ticker">
-  <p>
-    Andhra Paper &nbsp;&nbsp;&nbsp; Andritz &nbsp;&nbsp;&nbsp; Allan Smith Engineering &nbsp;&nbsp;&nbsp; Balarsha Paper Mill &nbsp;&nbsp;&nbsp; Birla Carbon &nbsp;&nbsp;&nbsp; Epsilon Carbon &nbsp;&nbsp;&nbsp; Gaillant &nbsp;&nbsp;&nbsp; Girdhan Metal &nbsp;&nbsp;&nbsp; Godavari Ispat &nbsp;&nbsp;&nbsp; Hindalco &nbsp;&nbsp;&nbsp; Jindal Saw &nbsp;&nbsp;&nbsp; JSW Steel &nbsp;&nbsp;&nbsp; Larsen & Toubro &nbsp;&nbsp;&nbsp; Loydes &nbsp;&nbsp;&nbsp; NCL &nbsp;&nbsp;&nbsp; Reliance &nbsp;&nbsp;&nbsp; Shree Cement &nbsp;&nbsp;&nbsp; Shyam Steel &nbsp;&nbsp;&nbsp; Silox &nbsp;&nbsp;&nbsp; SRF &nbsp;&nbsp;&nbsp; Tata Steel &nbsp;&nbsp;&nbsp; Vishnu Chemical
-  </p>
+<div class="welcome-message">
+Welcome to Allan Smith Task Portal
 </div>
-  </footer>
 
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
+<div class="portal-container">
+    <div class="portal" onclick="window.open('https://forms.gle/AR6n6kSKjc7GRiDF7', '_blank');">
+        Employee Portal
+    </div>
+    <div class="portal" onclick="window.open('https://forms.gle/r5dfrSkoWEYC1iGN6', '_blank');">
+        Customer Portal
+    </div>
+    <div class="portal" onclick="window.open('kiln-technicality.html', '_blank');">
+        Kiln Technicality
+    </div>
+</div>
+
+<!-- Site Current Status Section with password-protected Google Sheet -->
+<div class="site-status">
+<h2>Site Current Status</h2>
+<button onclick="checkPassword()" style="padding:10px 20px; font-size:16px; cursor:pointer;">View Status</button>
+<div id="sheet-container" style="display:none; margin-top:20px;">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQoU9VL7RZRcyup88teZP1WBxswEuPijOz5HK0Uy_gFdm6P1IE5rxqiOvkaOi459DdCpeWFDjGxwrob/pubhtml?widget=true&amp;headers=false" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+</div>
+</div>
+
+<script>
+function checkPassword() {
+    var pwd = prompt("Enter password to view current status:");
+    if (pwd === "yourpassword") { // Replace with your password
+        document.getElementById("sheet-container").style.display = "block";
+    } else {
+        alert("Access Denied!");
     }
+}
+</script>
 
-    function unlockNotes() {
-      const password = document.getElementById("password").value;
-      const correct = "rahul123";
-      if (password === correct) {
-        document.getElementById("notesLink").style.display = 'block';
-      } else {
-        alert("Incorrect password");
-      }
-    }
+<!-- Experts Section -->
+<div class="experts">
+<h2>Our Technical Experts</h2>
+<div class="expert-item">
+    <img src="Shailesh Kumar.jpg" alt="Shailesh Kumar" class="expert-img">
+    <div class="expert-details">
+        <p><strong>Shailesh Kumar</strong></p>
+        <p>Sr. Technical Expert</p>
+        <p>shailesh@smithengg.in</p>
+    </div>
+</div>
+<div class="expert-item">
+    <img src="pratik Badkhal.jpg" alt="Pratik Badkhal" class="expert-img">
+    <div class="expert-details">
+        <p><strong>Pratik Badkhal</strong></p>
+        <p>Sr. Executive Engineer</p>
+        <p>+918806053306</p>
+    </div>
+</div>
+<div class="expert-item">
+    <img src="Mrs.Nidhi.jpg" alt="Mrs.Nidhi" class="expert-img">
+    <div class="expert-details">
+        <p><strong>Mrs.Nidhi</strong></p>
+        <p>Technical Consultant</p>
+        <p>+919004676484</p>
+    </div>
+</div>
+</div>
 
-    function changeCover(event) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          document.querySelector('header').style.backgroundImage = `url('${e.target.result}')`;
-        }
-        reader.readAsDataURL(file);
-      }
-    }
-
-    function changeProfile(event) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          document.getElementById('profileImage').src = e.target.result;
-        }
-        reader.readAsDataURL(file);
-      }
-    }
-
-    showSection('about');
-  </script>
+<footer>
+&copy; Welcome to Allan Smith Task Portal.
+</footer>
 </body>
 </html>
