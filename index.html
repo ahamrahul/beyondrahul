@@ -1,67 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rkiln-Revolution</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-<style>
-  /* keep your original styles... */
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      text-align: center;
+    }
 
-  /* Accordion (switch box) */
-  .accordion {
-    max-width: 800px;
-    margin: 20px auto;
-  }
-  .accordion-item {
-    background: rgba(255,255,255,0.1);
-    margin-bottom: 10px;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  .accordion-header {
-    padding: 15px;
-    font-weight: bold;
-    background: rgba(0,0,0,0.4);
-    transition: 0.3s;
-  }
-  .accordion-header:hover {
-    background: rgba(0,0,0,0.6);
-  }
-  .accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    padding: 0 15px;
-  }
-  .accordion-content.open {
-    max-height: 500px;
-    padding: 15px;
-  }
-  .accordion-content p, .accordion-content ul {
-    color: #fff;
-  }
-</style>
+    header {
+      padding: 50px 20px 20px;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 10px 0;
+      color: #ffde59;
+    }
+
+    header p.highlight {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 10px 0 20px;
+      color: #ffd5d5;
+    }
+
+    .resume-button {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #ff4e50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .resume-button:hover {
+      background: #ff7676;
+    }
+
+    /* Accordion */
+    .accordion {
+      max-width: 700px;
+      margin: 40px auto;
+      text-align: left;
+    }
+
+    .accordion-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      padding: 15px;
+      font-weight: bold;
+      background: rgba(0,0,0,0.4);
+      cursor: pointer;
+    }
+
+    .accordion-header:hover {
+      background: rgba(0,0,0,0.6);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      padding: 0 15px;
+    }
+
+    .accordion-content.open {
+      max-height: 500px;
+      padding: 15px;
+    }
+
+    .accordion-content p, .accordion-content ul {
+      margin: 0;
+      color: #fff;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 40px 20px;
+    }
+
+    #contact h2 {
+      margin-bottom: 20px;
+      color: #ffde59;
+    }
+
+    #contact a {
+      color: #ffd5d5;
+      text-decoration: none;
+    }
+
+    /* Footer & Ticker */
+    footer {
+      background: rgba(0,0,0,0.4);
+      padding: 15px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    .ticker {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ticker p {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scrollText 20s linear infinite;
+      color: #ffde59;
+      font-weight: bold;
+    }
+
+    @keyframes scrollText {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <img src="your-photo.jpg" alt="Profile" class="profile-pic" id="profileImage">
+  <img src="your-photo.jpg" alt="Profile Photo">
   <h1>Rkiln-Revolution</h1>
   <p class="highlight">Mechanical Engineer | Kiln Specialist | Industrial AI</p>
   <a href="Rahul_Resume.pdf" class="resume-button" download>Download Resume</a>
 </header>
 
-<!-- Accordion for About / Projects / Skills -->
 <div class="accordion">
   <div class="accordion-item">
     <div class="accordion-header">About Me</div>
     <div class="accordion-content">
       <p>Hello! I'm Rahul Jha, a Mechanical Engineer with expertise in rotary kilns, alignment, and AI-driven analysis.</p>
-      <p>I aim to merge traditional engineering with Artificial Intelligence for smarter, safer, and more efficient industry operations.</p>
     </div>
   </div>
 
@@ -70,9 +169,8 @@
     <div class="accordion-content">
       <ul>
         <li>AI-powered predictive maintenance for rotary kilns</li>
-        <li>3D SolidWorks design of kiln parts (gear, pinion, roller, tyre, baseframe)</li>
+        <li>3D SolidWorks design of kiln parts</li>
         <li>Shell profile & alignment analysis reports</li>
-        <li>Stress analysis for kiln shells</li>
       </ul>
     </div>
   </div>
@@ -81,17 +179,15 @@
     <div class="accordion-header">Skills</div>
     <div class="accordion-content">
       <ul>
-        <li>Rotary Kiln Alignment (Hot/Cold)</li>
+        <li>Rotary Kiln Alignment</li>
         <li>Shell & Tyre Roller Inspection</li>
         <li>Predictive Maintenance with AI/ML</li>
-        <li>SolidWorks, AutoCAD, Python, Data Analysis</li>
-        <li>Team Coordination & Client Communication</li>
+        <li>SolidWorks, AutoCAD, Python</li>
       </ul>
     </div>
   </div>
 </div>
 
-<!-- Contact -->
 <section id="contact">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a></p>
@@ -100,21 +196,18 @@
 </section>
 
 <footer>
-  <p>© 2025 Rahul Jha. Built with ❤️ and dedication.</p>
+  <p>© 2025 Rahul Jha. Built with ❤️</p>
   <div class="ticker">
     <p>
-      Andhra Paper &nbsp;&nbsp;&nbsp; Andritz &nbsp;&nbsp;&nbsp; Allan Smith Engineering &nbsp;&nbsp;&nbsp; 
-      Balarsha Paper Mill &nbsp;&nbsp;&nbsp; Birla Carbon &nbsp;&nbsp;&nbsp; Epsilon Carbon &nbsp;&nbsp;&nbsp; 
-      Gaillant &nbsp;&nbsp;&nbsp; Girdhan Metal &nbsp;&nbsp;&nbsp; Godavari Ispat &nbsp;&nbsp;&nbsp; 
-      Hindalco &nbsp;&nbsp;&nbsp; Jindal Saw &nbsp;&nbsp;&nbsp; JSW Steel &nbsp;&nbsp;&nbsp; Larsen & Toubro &nbsp;&nbsp;&nbsp; 
-      Loydes &nbsp;&nbsp;&nbsp; NCL &nbsp;&nbsp;&nbsp; Reliance &nbsp;&nbsp;&nbsp; Shree Cement &nbsp;&nbsp;&nbsp; 
-      Shyam Steel &nbsp;&nbsp;&nbsp; Silox &nbsp;&nbsp;&nbsp; SRF &nbsp;&nbsp;&nbsp; Tata Steel &nbsp;&nbsp;&nbsp; Vishnu Chemical
+      Andhra Paper • Andritz • Allan Smith Engineering • Balarsha Paper Mill • Birla Carbon • Epsilon Carbon • 
+      Gaillant • Girdhan Metal • Godavari Ispat • Hindalco • Jindal Saw • JSW Steel • Larsen & Toubro • 
+      Loydes • NCL • Reliance • Shree Cement • Shyam Steel • Silox • SRF • Tata Steel • Vishnu Chemical
     </p>
   </div>
 </footer>
 
 <script>
-  // Accordion toggle
+  // Accordion
   document.querySelectorAll(".accordion-header").forEach(header => {
     header.addEventListener("click", () => {
       const content = header.nextElementSibling;
