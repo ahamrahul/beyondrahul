@@ -1,188 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rkiln-Revolution</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f8f9fb;
-      color: #222;
-      line-height: 1.6;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-    /* Header */
-    header {
-      text-align: center;
-      padding: 50px 20px 20px;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: #fff;
-    }
+<style>
+  /* keep your original styles... */
 
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-      font-weight: 700;
-    }
-
-    /* Subtitle + Resume */
-    .subtitle {
-      text-align: center;
-      margin: 20px auto 10px;
-      font-size: 1.2rem;
-      color: #333;
-    }
-
-    .resume-btn {
-      display: block;
-      margin: 0 auto 40px;
-      padding: 12px 25px;
-      background: #2a5298;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s;
-      text-align: center;
-      width: max-content;
-    }
-
-    .resume-btn:hover {
-      background: #1e3c72;
-    }
-
-    /* Accordion sections */
-    .accordion {
-      max-width: 800px;
-      margin: 0 auto 40px;
-      padding: 0 15px;
-    }
-
-    .accordion-item {
-      background: #fff;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-      overflow: hidden;
-    }
-
-    .accordion-header {
-      padding: 15px 20px;
-      cursor: pointer;
-      font-weight: 600;
-      background: #f0f2f7;
-      transition: background 0.3s;
-    }
-
-    .accordion-header:hover {
-      background: #e2e6ef;
-    }
-
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.3s ease;
-      padding: 0 20px;
-    }
-
-    .accordion-content.open {
-      max-height: 500px;
-      padding: 15px 20px;
-    }
-
-    /* Company logos ticker */
-    .ticker {
-      width: 100%;
-      overflow: hidden;
-      background: #1e3c72;
-      color: #fff;
-      padding: 10px 0;
-    }
-
-    .ticker-content {
-      display: inline-block;
-      white-space: nowrap;
-      animation: scroll 20s linear infinite;
-    }
-
-    .ticker span {
-      display: inline-block;
-      margin: 0 40px;
-      font-weight: 500;
-    }
-
-    @keyframes scroll {
-      from { transform: translateX(100%); }
-      to { transform: translateX(-100%); }
-    }
-  </style>
+  /* Accordion (switch box) */
+  .accordion {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  .accordion-item {
+    background: rgba(255,255,255,0.1);
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .accordion-header {
+    padding: 15px;
+    font-weight: bold;
+    background: rgba(0,0,0,0.4);
+    transition: 0.3s;
+  }
+  .accordion-header:hover {
+    background: rgba(0,0,0,0.6);
+  }
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 15px;
+  }
+  .accordion-content.open {
+    max-height: 500px;
+    padding: 15px;
+  }
+  .accordion-content p, .accordion-content ul {
+    color: #fff;
+  }
+</style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Rkiln-Revolution</h1>
-  </header>
+<header>
+  <img src="your-photo.jpg" alt="Profile" class="profile-pic" id="profileImage">
+  <h1>Rkiln-Revolution</h1>
+  <p class="highlight">Mechanical Engineer | Kiln Specialist | Industrial AI</p>
+  <a href="Rahul_Resume.pdf" class="resume-button" download>Download Resume</a>
+</header>
 
-  <!-- Subtitle -->
-  <div class="subtitle">Mechanical Engineer | Kiln Specialist | Industrial AI</div>
-
-  <!-- Resume -->
-  <a href="resume.pdf" class="resume-btn" target="_blank">Download Resume</a>
-
-  <!-- Accordion Sections -->
-  <div class="accordion">
-    <div class="accordion-item">
-      <div class="accordion-header">About Me</div>
-      <div class="accordion-content">
-        <p>I am a rotary kiln specialist and dynamic mechanical engineer with a passion for industrial AI. 
-           My journey combines traditional engineering expertise with cutting-edge technologies to revolutionize industrial processes.</p>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <div class="accordion-header">Projects</div>
-      <div class="accordion-content">
-        <ul>
-          <li>AI-driven predictive maintenance for rotary kilns</li>
-          <li>3D SolidWorks design of kiln parts (gear, pinion, roller, tyre, baseframe)</li>
-          <li>Shell profile and kiln alignment analysis</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <div class="accordion-header">Skills</div>
-      <div class="accordion-content">
-        <p><b>Technical:</b> Rotary Kiln Alignment, Hot/Cold Services, AI for Industry, Predictive Maintenance, SolidWorks, Python, Data Analysis</p>
-        <p><b>Soft Skills:</b> Problem Solving, Quick Learning, Client Communication</p>
-      </div>
+<!-- Accordion for About / Projects / Skills -->
+<div class="accordion">
+  <div class="accordion-item">
+    <div class="accordion-header">About Me</div>
+    <div class="accordion-content">
+      <p>Hello! I'm Rahul Jha, a Mechanical Engineer with expertise in rotary kilns, alignment, and AI-driven analysis.</p>
+      <p>I aim to merge traditional engineering with Artificial Intelligence for smarter, safer, and more efficient industry operations.</p>
     </div>
   </div>
 
-  <!-- Running Companies -->
+  <div class="accordion-item">
+    <div class="accordion-header">Projects</div>
+    <div class="accordion-content">
+      <ul>
+        <li>AI-powered predictive maintenance for rotary kilns</li>
+        <li>3D SolidWorks design of kiln parts (gear, pinion, roller, tyre, baseframe)</li>
+        <li>Shell profile & alignment analysis reports</li>
+        <li>Stress analysis for kiln shells</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">Skills</div>
+    <div class="accordion-content">
+      <ul>
+        <li>Rotary Kiln Alignment (Hot/Cold)</li>
+        <li>Shell & Tyre Roller Inspection</li>
+        <li>Predictive Maintenance with AI/ML</li>
+        <li>SolidWorks, AutoCAD, Python, Data Analysis</li>
+        <li>Team Coordination & Client Communication</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:ahamrahuljha@gmail.com">ahamrahuljha@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/ahamrahul" target="_blank">linkedin.com/in/rahul-jha</a></p>
+  <p>Mobile/WhatsApp: <strong>+91 9113167508</strong></p>
+</section>
+
+<footer>
+  <p>© 2025 Rahul Jha. Built with ❤️ and dedication.</p>
   <div class="ticker">
-    <div class="ticker-content">
-      <span>JSW Steel</span>
-      <span>Andritz AG</span>
-      <span>Allan Smith Engineering</span>
-      <span>PHED Bihar</span>
-      <span>More Collaborations...</span>
-    </div>
+    <p>
+      Andhra Paper &nbsp;&nbsp;&nbsp; Andritz &nbsp;&nbsp;&nbsp; Allan Smith Engineering &nbsp;&nbsp;&nbsp; 
+      Balarsha Paper Mill &nbsp;&nbsp;&nbsp; Birla Carbon &nbsp;&nbsp;&nbsp; Epsilon Carbon &nbsp;&nbsp;&nbsp; 
+      Gaillant &nbsp;&nbsp;&nbsp; Girdhan Metal &nbsp;&nbsp;&nbsp; Godavari Ispat &nbsp;&nbsp;&nbsp; 
+      Hindalco &nbsp;&nbsp;&nbsp; Jindal Saw &nbsp;&nbsp;&nbsp; JSW Steel &nbsp;&nbsp;&nbsp; Larsen & Toubro &nbsp;&nbsp;&nbsp; 
+      Loydes &nbsp;&nbsp;&nbsp; NCL &nbsp;&nbsp;&nbsp; Reliance &nbsp;&nbsp;&nbsp; Shree Cement &nbsp;&nbsp;&nbsp; 
+      Shyam Steel &nbsp;&nbsp;&nbsp; Silox &nbsp;&nbsp;&nbsp; SRF &nbsp;&nbsp;&nbsp; Tata Steel &nbsp;&nbsp;&nbsp; Vishnu Chemical
+    </p>
   </div>
+</footer>
 
-  <script>
-    // Accordion toggle script
-    const headers = document.querySelectorAll(".accordion-header");
-    headers.forEach(header => {
-      header.addEventListener("click", () => {
-        const content = header.nextElementSibling;
-        content.classList.toggle("open");
-      });
+<script>
+  // Accordion toggle
+  document.querySelectorAll(".accordion-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+      content.classList.toggle("open");
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
